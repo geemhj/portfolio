@@ -1,0 +1,38 @@
+/* Global */
+:root{
+
+/* App colors */
+--color-primary: var(--color-black);
+--color-accent: var(--color-blue);
+--color-text: var(--color-white);
+
+/* Colors */
+
+--color-white: #ffffff;
+--color-black: #202020;
+--color-blue: #0FE0E1;
+--color-orange: #fd6413;
+--color-gray: #1b1e26;
+}
+
+/* 공통사항 */
+
+*{box-sizing: border-box;}
+
+body{margin:0; padding:0; 
+    font-family: 'Noto Sans KR', 'Playfair Display'; }
+
+/* font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Playfair Display', serif; */
+
+ul{list-style: none;}
+a{text-decoration: none; color: var(--color-white);}
+button{background:transparent; outline:0; border:0; }
+
+/* Header */
+#header{background: var(--color-primary);  position:fixed; top:0; width:100%; padding:0 1rem ;
+    display:flex; justify-content: space-between; align-items: center;}
+.header__menu{display:flex; justify-content: space-between; gap:3rem; }
+.header__menu__item{ font-family: 'Playfair Display'; font-weight:500; padding-bottom:10px;}
+.header__menu__item:hover{border-bottom:1px solid var(--color-blue); }
+.header__menu__item.selected{border-bottom:1.5px solid var(--color-blue); color:var(--color-blue);}
