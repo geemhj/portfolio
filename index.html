@@ -29,6 +29,7 @@
         <link rel="stylesheet" href="css/style.css">
 
         <!-- JavaScript -->
+        <script src="http://code.jquery.com/jquery-1.9.0rc1.js"></script>
         <script src="src/main.js" defer></script>
     </head>
 
@@ -56,169 +57,199 @@
             <section id="home">
                 <h2 class="home__title">Portfolio</h2>
                 <p class="home__description">Web Publisher - KIM HYOJEONG</p>
+                <a class="home__btn" href="#contact">Contact Me!</a>
             </section>
 
             <!-- 2. About me -->
-            <section id="about">
-                <h2>ABOUT ME</h2>
-                <p>나에 대해 설명하는 문구 나를 어필하는 문장</p>
-                <ul>
-                    <li>
-                        <i class="fa-brands fa-html5"></i>
-                        <p>능력1</p>
-                        <p>블라블라</p>
+            <section id="about" class="section max-container">
+                <h2 class="section__title">ABOUT ME</h2>
+                <p class="section__description">
+                    Do what you like, love what you do! 퍼블리싱을 좋아하는 <span>웹 퍼블리셔, 김효정</span>입니다.<br>
+                    몇번의 시행착오 끝에 원하는 결과물을 얻었을 때의 쾌감과 성취감은 제가 퍼블리싱을 좋아하는 이유입니다.<br>
+                    좋아하는 일을 더 잘 해내기 위해 제자리에 멈춰있지 않고 꾸준히 공부하며 발전하는 성장형 퍼블리셔가 되고자 노력합니다.<br>
+                    탄탄하고 감각적인 UI와 기억에 남는 UX를 제공하는, 좋아하는 것을 잘하는 웹 퍼블리셔가 되겠습니다.  
+                </p>
+                <ul class="abilities">
+                    <li class="ability">
+                        <i class="fa-solid fa-graduation-cap ability__icon"></i>
+                        <p class="ability__title">EDUCATION</p>
+                        <ol class="ability__description">
+                            <li class="ability__date ability__data">
+                                <p>2023.07</p>
+                                <p>UI/UX 웹&앱 디자인 교육 이수</p>
+                            </li>
+                            <li class="ability__date ability__data">
+                                <p>2019.02</p>
+                                <p>국민대학교 중어중문학과 졸업</p>
+                            </li>
+                        </ol>
                     </li>
-                    <li>
-                        <i class="fa-brands fa-html5"></i>
-                        <p>능력1</p>
-                        <p>블라블라</p>
+                    <li class="ability">
+                        <i class="fa-solid fa-id-card ability__icon"></i>                        
+                        <p class="ability__title">CERTIFICATION</p>
+                        <ol class="ability__description">
+                            <li class="ability__date ability__data">
+                                <p>2023.07</p>
+                                <p>웹디자인기능사</p>
+                            </li>
+                            <li class="ability__date ability__data">
+                                <p>2023.05</p>
+                                <p>GTQ 포토샵 1급</p>
+                            </li>
+                            <li class="ability__date ability__data">
+                                <p>2019.07</p>
+                                <p>컴퓨터활용능력 1급</p>
+                            </li>
+                        </ol>
                     </li>
-                    <li>
-                        <i class="fa-brands fa-html5"></i>
-                        <p>능력1</p>
-                        <p>블라블라</p>
+                    <li class="ability">
+                        <i class="fa-solid fa-user ability__icon"></i>
+                        <p class="ability__title">COMPETENCE</p>
+                        <ul class="ability__description">
+                            <li class="ability__data">명확하고 효율적인 <b>코딩구현 능력</b></li>
+                            <li class="ability__data">협업자와의 원활한 <b>커뮤니케이션 능력</b></li>
+                            <li class="ability__data">끝까지 해내는 <b>끈기와 책임감</b></li>
+                        </ul>
                     </li>
-                </ul>
-
-                <ul>
-                    <li>
-                        <img src="" alt="">
-                        <div>
-                            <p>이젠아카데미 UIUX 웹&앱 디자인 교육 이수</p>
-                            <p>2023.03 - 2023.07</p>
-                        </div>
-                    </li>
-                    <li></li>
                 </ul>
             </section>
 
             <!-- 3. Skills -->
-            <section id="skills">
-                <h2>Skills</h2>
-                <p>Skills & Attributes</p>
-                <p></p>
-                <div>
-                    <section>
-                        <h3>Coding Skills</h3>
-                        <ul>
-                            <li>
-                                <div><span>HTML</span><span>90%</span></div>
-                                <div><div style="width: 90%"></div></div>
-                            </li>
-                            <li>
-                                <div><span>CSS</span><span>85%</span></div>
-                                <div><div style="width: 85%"></div></div>
-                            </li>
-                            <li>
-                                <div><span>JS & jQuery</span><span>70%</span></div>
-                                <div><div style="width: 70%"></div></div>
-                            </li>
-                            <li>
-                                <div><span>Photoshop</span><span>85%</span></div>
-                                <div><div style="width: 85%"></div></div>
-                            </li>
-                            <li>
-                                <div><span>Illustrator</span><span>80%</span></div>
-                                <div><div style="width: 80%"></div></div>
-                            </li>
-                            <li>
-                                <div><span>Figma</span><span>90%</span></div>
-                                <div><div style="width: 90%"></div></div>
-                            </li>
-                        </ul>
-                    </section>
+            <section id="skills" class="section">
+                <div class="max-container">
+                    <h2 class="section__title">SKILLS</h2>
+                    <p class="section__description">
+                        디자인과 퍼블리싱에 대한 이해를 바탕으로 최적화된 시맨틱 태그를 활용해 명확하고 효율적인 마크업 작업을 수행합니다.<br>
+                        웹 표준과 웹 접근성을 준수하고 SEO 최적화 및 크로스 브라우징을 종합적으로 고려해 완성도 높은 작업물을 구현합니다.<br>
+                        동적인 웹 사이트를 구현하기 위해 꾸준히 Javascript를 공부하고 있으며 더 나아가 React, Vue 등의 다양한 환경에서 마크업 작업을 하는 것이 목표입니다.<br>
+                        빠르게 발전하는 개발 동향에 맞춰 최신 기술을 습득하고 도전을 두려워하지 않는 웹 퍼블리셔가 되겠습니다.   
+                    </p>
+                    <div class="skills__container">
+                        <section class="skills__coding skill">
+                            <h3 class="skills__title">SKILLS</h3>
+                            <ul class="skills__chart">
+                                <li>
+                                    <div class="skills__circlebar skills__chart1" data-percent="90"><span>90%</span></div>
+                                    <div>HTML</div>
+                                </li>
 
-                    <section>
-                        <h3>Tools</h3>
-                        <ul>
-                            <li>Visual Studio Code</li>
-                        </ul>
-                    </section>
+                                <li>
+                                    <div class="skills__circlebar skills__chart2" data-percent="85"><span>85%</span></div>
+                                    <div>CSS</div>
+                                </li>
 
-                    <section>
-                        <h3>Etc</h3>
-                        <ul>
-                            <li>Git</li>
-                        </ul>
-                    </section>
+                                <li>
+                                    <div class="skills__circlebar skills__chart3" data-percent="70"><span>70%</span></div>
+                                    <div>JS & jQuery</div>
+                                </li>
+
+                                <li>
+                                    <div class="skills__circlebar skills__chart4" data-percent="85"><span>85%</span></div>
+                                    <div>Photoshop</div>
+                                </li>
+
+                                <li>
+                                    <div class="skills__circlebar skills__chart5" data-percent="80"><span>80%</span></div>
+                                    <div>Illustrator</div>
+                                </li> 
+                            </ul>
+                        </section>
+
+                        <section class="skills__tools skill">
+                            <h3 class="skills__title">TOOLS</h3>
+                            <ul>
+                                <li>Visual Studio Code</li>
+                                <li>Figma</li>
+                            </ul>
+                        </section>
+
+                        <section class="skills__etc skill">
+                            <h3 class="skills__title">ETC</h3>
+                            <ul>
+                                <li>Git</li>
+                            </ul>
+                        </section>
+                    </div>
                 </div>
             </section>
 
             <!-- 4. Work -->
-            <section id="work">
-                <h2>Work</h2>
-                <p>Projects</p>
-                <ul>
-                    <li>
-                        <button>All</button>
-                    </li>
-                    <li>
-                        <button>Responsive</button>
-                    </li>
-                    <li>
-                        <button>PC</button>
-                    </li>
-                    <li>
-                        <button>Mobile</button>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="#" target="_blank">
-                            <img src="images/projects/project1.webp" alt="project1" />
-                            <div>
-                                <h3>Project #1</h3>
-                                <p>Clone Coding with HTML, CSS</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <img src="images/projects/project2.webp" alt="project2" />
-                            <div>
-                                <h3>Project #2</h3>
-                                <p>Clone Coding with HTML, CSS</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <img src="images/projects/project3.webp" alt="project3" />
-                            <div>
-                                <h3>Project #3</h3>
-                                <p>Clone Coding with HTML, CSS</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
+
+            <section id="work" class="section">
+                <div class="max-container">
+                    <h2 class="section__title">WORK</h2>
+
+                    <div class="projects__container">
+                        <ul class="projects">
+                            <li class="project project1">
+                                <div class="project__img project__img1">
+                                    <img src="images/work_project_img1.png" alt="빕스 메인화면 미리보기">
+                                </div>
+
+                                <div class="project__data">
+                                    <h3 class="project__title">VIPS 빕스</h3>
+                                    <p class="project__description">반응형 웹 가상 리뉴얼</p>
+                                    <p class="project__period">작업기간 : 2023.04 - 2023.05</p>
+                                    <p class="project__contribution">기여도 : 기획, 디자인, 구현 100%</p>
+                                    <div class="project__link">
+                                        <a href="https://www.figma.com/file/GrVjKZesbcZCebnVxOtu5R/VIPS---Responsive-Web-Design-%5Bprototype%5D?type=design&node-id=408%3A2387&mode=design&t=lNW2YXbFLMwy6pNc-1" target="_blank">프로젝트 설명서</a>
+                                        <a href="http://hjk.dothome.co.kr/vips" target="_blank">웹 사이트</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="project project2">
+                                <div class="project__img project__img2">
+                                    <img src="images/work_project_img2.png" alt="효성그룹 메인화면 미리보기">
+                                </div>
+                                <div class="project__data">
+                                    <h3 class="project__title">효성그룹</h3>
+                                    <p class="project__description">모바일 웹 가상 리뉴얼</p>
+                                    <p class="project__period">작업기간 : 2023.06</p>
+                                    <p class="project__contribution">기여도 : 기획, 디자인, 구현 100%</p>
+                                    <div class="project__link">
+                                        <a href="https://www.figma.com/file/q89VuNAjQwJFZdKqkxXRA8/HYOSUNG---Mobile-%5Bprototype%5D?type=design&node-id=808%3A3989&mode=design&t=6Qamtt6ylAj588rO-1" target="_blank">프로젝트 설명서</a>
+                                        <a href="http://hjk.dothome.co.kr/hyosung" target="_blank">웹 사이트</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+        
+                    <!-- 슬라이드 조작방식1 (좌우 버튼제공) -->
+                    <div class="work__controls">
+                        <button><i class="fa-solid fa-chevron-left work__controls__pre"></i><span>이전</span></button>
+                        <button><i class="fa-solid fa-chevron-right work__controls__next"></i><span>다음</span></button>
+                    </div>
+        
+                    <!-- 슬라이드 조작방식2 (바형식의 나열된 네비게이션 버튼(바네이갤러리) 제공) -->
+                    <div class="work__list">
+                        <button class="work__list__btn"><span>첫번째</span></button>
+                        <button class="work__list__btn"><span>두번째</span></button>
+                    </div>
+                </div>
             </section>
 
-            <!-- 5. Testimonials -->
-            <section id="testimonial"></section>
+            <section id="contact" class="section">
+                <h2 class="section__title">CONTACT</h2>
+                <p class="contact__description">
+                    "퍼블리싱은 단순히 정보를 전달하는 것 이상의 의미를 담아내는 일이라 생각합니다.<br>
+                    감동과 영감을 주는 콘텐츠를 통해 사용자의 삶을 더욱 아름답게 만드는 웹 퍼블리셔가 되겠습니다."
+                </p>
+                <p class="contact__mail"><a href="mailto:hjkx13@gmail.com"><i class="fa-solid fa-envelope"></i> MAIL</a></p>
+            </section>
 
             <!-- Arrow up -->
-            <aside></aside>
             <aside>
-                <a href="#home" title="페이지 상단으로 돌아가기">
-                    <i class="fa-solid fa-arrow-up"></i>
-                </a>
+                <button class="arrow-up"><i class="fa-solid fa-arrow-up"></i><span>페이지 상단으로 돌아가기</span></button>
             </aside>
 
         </main>
 
         <!-- Footer -->
-        <footer id="contact">
-            <h2>Let&#39;s talk</h2>
-            <p>hjkx13@gmail.com</p>
-            <ul>
-              <li>
-                <a href="https://github.com/dream-ellie" target="_blank" title="깃허브 링크">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-              </li>
-              
-            </ul>
-            <p>ⓒKIMHYOJEONG - All rights reserved</p>
+        <footer id="footer">
+            <p>본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</p>
+            <p>ⓒ 2023 KIMHYOJEONG. All rights reserved.</p>
         </footer>
         
     </body>
