@@ -32,29 +32,39 @@ function vSlideBtn(count){
     $(".work__list button:eq(" + count + ")").css({background:"var(--color-accent)"});
 };
 
+// --------------------------------------------------------
+
 $(function(){
+
+  vSlideBtn(count);
+
+  // 이전버튼
+  $(".work__controls button:eq(0)").on("click",function(){
+    vSlideRe();
+  });
+
+  // 다음버튼
+  $(".work__controls button:eq(1)").on("click",function(){
+    vSlide(); 
+  });
+
+  $(".work__list button").on("click",function(){
+
+  count = $(this).index()     
 
     vSlideBtn(count);
 
-    // 이전버튼
-    $(".work__controls button:eq(0)").on("click",function(){
-        vSlideRe();
-    });
+    $(".projects").stop().animate({marginLeft:-100 * count + "%"});
+  });
 
-    // 다음버튼
-    $(".work__controls button:eq(1)").on("click",function(){
-        vSlide(); 
-    });
 
-    $(".work__list button").on("click",function(){
 
-        count = $(this).index()     
 
-        vSlideBtn(count);
+  $(window).scroll(function(){
+    $("h1 a").text($(window).scrollTop());        
 
-        $(".projects").stop().animate({marginLeft:-100 * count + "%"});
+  });
 
-    });
 
 });
 

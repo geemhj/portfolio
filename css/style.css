@@ -24,7 +24,7 @@ ul, ol{list-style: none; }
 a{text-decoration: none; color: var(--color-white);}
 button{background:transparent; outline:0; border:0; cursor: pointer;}
 
-.section{padding:8rem 0; text-align: center;}
+.section{padding:8rem 1rem; text-align: center;}
 .max-container{max-width:1200px; margin:0 auto;}
 .section__title{font-family:'Playfair Display'; font-size:2.5rem; margin-bottom:1rem;}
 .section__title::after{content: ''; display:block; 
@@ -73,7 +73,7 @@ button{background:transparent; outline:0; border:0; cursor: pointer;}
 .skill{padding:3rem 0;}
 .skills__title{font-weight: bold; margin-bottom:3rem; font-size:1.2rem;}
 
-.skills__chart{display:flex; flex-wrap:wrap; justify-content: center; gap:3rem 5rem; padding:0 7rem;}
+.skills__chart{display:flex; flex-wrap:wrap; justify-content: center; gap:3rem 5rem; padding:0 5rem;}
 .skills__circlebar {width: 100px; height: 100px; border-radius: 50%; position: relative; 
     text-align: center; margin-bottom:1.2rem;}
 .skills__circlebar span{display: none;}
@@ -118,8 +118,8 @@ button{background:transparent; outline:0; border:0; cursor: pointer;}
 .work__controls span{display:none;}
 .work__controls i{font-size:3rem; color:var(--color-gray);
     position: absolute; margin-top:-280px;}
-.work__controls__pre{left:70px;}
-.work__controls__next{right:70px;}
+.work__controls__pre{left:50px;}
+.work__controls__next{right:50px;}
 .work__controls button:hover{opacity: 0.5;}
 
 .work__list{position:absolute; left:50%; transform: translateX(-50%); }
@@ -145,4 +145,50 @@ button{background:transparent; outline:0; border:0; cursor: pointer;}
 #footer p:first-child{color:#dadada;}
 #footer p:last-child{color:#787878;}
 
+@media screen and (max-width: 1100px) {
+
+    .section{padding:6rem 2rem;}
+    .section__title{font-size:2.3rem;}
+
+    .home__title{font-size:120px; margin:50px;}
+    .home__description{margin-bottom:8rem;}
+
+    .abilities{flex-direction: column; align-items: center; }
+    .ability{max-width: 28rem; width:28rem;}
+
+    .skills__container{grid-template-columns: 1fr;}
+    .skills__chart{gap:2rem 4rem; padding:0 1rem; }
+
+    .project{flex-direction: column; gap:2rem; padding:1rem 4rem 3rem 4rem;}
+    .project__img{width:100%;}
+    .project__data{padding-left:1rem;}
+    .project__link{margin-top:50px;}
+
+    .work__controls i{margin-top:-430px;}
+    .work__controls__pre{left:30px;}
+    .work__controls__next{right:30px;}
+}
+
+@media screen and (max-width:800px){
+
+    .section{padding:5rem 2rem;}
+    .section__title{font-size:2rem;}
+
+    /* 모바일 내비게이션 > 햄버거메뉴 */
+    #header{flex-direction: column; align-items: start;}
+    .header__menu{flex-direction: column; text-align: center; gap:2rem;}
+    .header__nav{width:100%; }
+
+    .home__title{font-size:80px; width:80%;}
+
+    .ability{max-width:26rem;}
+    
+    .project{gap:2rem; padding:0 0 3rem 0;}
+    .project__title{font-size:1.5rem;}
+    .project__data{padding-left:1rem;}
+    .work__controls i{display:none;}
+
+    .arrow-up{right:1.5rem; bottom:1.5rem;}
+
+}
 
