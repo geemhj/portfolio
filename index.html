@@ -41,6 +41,9 @@
             </div>
 
             <nav class="header__nav">
+
+                <button class="header__closebtn" aria-label="네비게이션 닫기"><i class="fa-solid fa-x"></i></button>
+                
                 <ul class="header__menu">
                     <li><a class="header__menu__item selected" href="#home">HOME</a></li>
                     <li><a class="header__menu__item" href="#about">ABOUT</a></li>
@@ -49,15 +52,22 @@
                     <li><a class="header__menu__item" href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
+
+            <!-- 모바일 버전 햄버거 메뉴 -->
+            <button class="header__openbtn" aria-label="네비게이션 메뉴">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </header>
 
         <!-- Main -->
         <main>
             <!-- 1. Home -->
             <section id="home">
-                <h2 class="home__title">Portfolio</h2>
-                <p class="home__description">Web Publisher - KIM HYOJEONG</p>
-                <a class="home__btn" href="#contact">Contact Me!</a>
+                <div class="home__container">
+                    <h2 class="home__title">Portfolio</h2>
+                    <p class="home__description">Web Publisher - KIM HYOJEONG</p>
+                    <a class="home__btn" href="#contact">Contact Me!</a>
+                </div>
             </section>
 
             <!-- 2. About me -->
@@ -179,7 +189,7 @@
                 <div class="max-container">
                     <h2 class="section__title">WORK</h2>
 
-                    <div class="projects__container">
+                    <div class="projects__container projects__scroll">
                         <ul class="projects">
                             <li class="project project1">
                                 <div class="project__img project__img1">

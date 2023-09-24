@@ -57,64 +57,67 @@ $(function(){
     $(".projects").stop().animate({marginLeft:-100 * count + "%"});
   });
 
-
-
-
-  $(window).scroll(function(){
-    $("h1 a").text($(window).scrollTop());        
-
+  // Arrow up 상단이동 버튼
+  $(".arrow-up").on("click",function(){
+    $("html").animate({scrollTop:0});
   });
-
-
-});
-
-
+  
 
 
 /*
+  $(window).scroll(function(){
 
-// 하단 컨트롤 버튼
-  // 현재 선택 버튼의 하이라이트 효과 ● ○ ○ ○  CSS 배경색 조작
+    $("h1").text($(window).scrollTop());   //제거가능
 
-var count = 0; 
-function workBtn(count){
+    var st = $(window).scrollTop();
 
-    count += 1;
-    
-    $(".work__list button").css({background:"var(--color-gray)"});
-    $(".work__list button:eq(" + count + ")").css({background:"var(--color-accent)"});
-};
+ 
+*/
+  // 모바일 버전 햄버거 메뉴
+  $(".header__openbtn").on("click",function(){
+    $(".header__menu").show();
+    $(this).hide();
+    $(".header__closebtn").show();
+  }); 
 
+  $(".header__closebtn").on("click",function(){
+    $(".header__menu").hide();
+    $(this).hide();
+    $(".header__openbtn").show();
+  }); 
 
+  // nav 메뉴 클릭시 메뉴 화면 닫기
+  $(".header__menu__item").on("click",function(){
+    $(".header__menu").hide();
+    $(".header__closebtn").hide();
+    $(".header__openbtn").show();
+  });
+  
+   
 
-$(function(){
-    // 이전 버튼
-    $(".work__controls button:eq(0)").on("click",function(){
-        $(".projects").animate({marginLeft:100 * $(this).index() + "%" });
-        workBtn(count);
-    })
-    // 다음 버튼
-
-    $(".work__controls button:eq(1)").on("click",function(){
-        $(".projects").animate({marginLeft:-100 * $(this).index() + "%" });
-        workBtn(count);
-    })
-
-    // 네비게이션 버튼
-    $(".work__list button").on("click",function(){
-        $(".projects").animate({marginLeft:-100 * $(this).index() + "%" });
-        $(".work__list button").css({background:"var(--color-gray)"});
-        $(this).css({background:"var(--color-accent)"});
-
-    });
-
-    // Arrow up 상단이동 버튼
-    $(".arrow-up").on("click",function(){
-        $("html").animate({scrollTop:0});
-    });
 
 });
-*/
+
+
+// ------------------
+
+// Home 섹션을 아래로 스크롤시 투명하게 처리
+const home = document.querySelector('.home__container');
+const homeHeight = home.offsetHeight;
+document.addEventListener('scroll', () => {
+  home.style.opacity = 1 -window.scrollY / homeHeight;
+});
+
+// Arrow up 버튼 아래로  스크롤시 투명하게 처리
+
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll',() => {
+  if(window.scrollY > homeHeight / 2 ){
+    arrowUp.style.opacity = 1;
+  }else{
+    arrowUp.style.opacity = 0;
+  }
+});
 
 
 

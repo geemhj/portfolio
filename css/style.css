@@ -43,6 +43,7 @@ button{background:transparent; outline:0; border:0; cursor: pointer;}
 .header__menu__item{ font-weight:500; padding-bottom:25px;}
 .header__menu__item:hover{border-bottom:3px solid var(--color-blue); }
 .header__menu__item.selected{border-bottom:3px solid var(--color-blue); color:var(--color-blue); font-weight: bold;}
+.header__openbtn, .header__closebtn{display:none;}
 
 /* Body - 1. Home */
 #home{background:var(--color-primary); color:var(--color-text);
@@ -131,13 +132,14 @@ button{background:transparent; outline:0; border:0; cursor: pointer;}
 /* Body - 5. Contact */
 .contact__description{line-height: 180%;}
 .contact__mail{padding-top:5rem; }
-.contact__mail a{color:#3b3b3b; font-size:2rem; font-weight:bold; padding-bottom:2px; }
+.contact__mail a{color:#3b3b3b; font-size:2rem; font-weight:bold; }
 .contact__mail a:hover{color:var(--color-accent);}
 
 /* Arrow up */
 .arrow-up{color:var(--color-text); background:var(--color-accent); font-size:2rem; 
     width: 45px; height:45px; border-radius:50%;
-    position:fixed; right:3rem; bottom:3rem; }
+    position:fixed; right:3rem; bottom:3rem; 
+    transition: opacity 300ms ease-in;}
 .arrow-up span{display:none;}
 
 /* Footer */
@@ -149,6 +151,8 @@ button{background:transparent; outline:0; border:0; cursor: pointer;}
 
     .section{padding:6rem 2rem;}
     .section__title{font-size:2.3rem;}
+
+    .header__openbtn, .header__closebtn{display:none;}
 
     .home__title{font-size:120px; margin:50px;}
     .home__description{margin-bottom:8rem;}
@@ -176,17 +180,26 @@ button{background:transparent; outline:0; border:0; cursor: pointer;}
 
     /* 모바일 내비게이션 > 햄버거메뉴 */
     #header{flex-direction: column; align-items: start;}
-    .header__menu{flex-direction: column; text-align: center; gap:2rem;}
+    .header__menu{flex-direction: column; text-align: center;  display:none;}
+    .header__menu__item{display:block;}
+    .header__menu__item{padding-bottom:10px; margin-bottom:15px; border:3px solid transparent;}
     .header__nav{width:100%; }
+    .header__openbtn{display:block; color:var(--color-white); font-size:2.5rem;
+        position:absolute; right:2rem; top:1.1rem;}
+    .header__closebtn{display:none; color:var(--color-white); font-size:2.5rem;
+        position:absolute; right:2rem; top:1.1rem;}
 
     .home__title{font-size:80px; width:80%;}
 
     .ability{max-width:26rem;}
     
+    .projects__scroll{overflow-x:scroll; }
     .project{gap:2rem; padding:0 0 3rem 0;}
     .project__title{font-size:1.5rem;}
     .project__data{padding-left:1rem;}
     .work__controls i{display:none;}
+    
+    .contact__mail{padding-top:3rem;}
 
     .arrow-up{right:1.5rem; bottom:1.5rem;}
 
