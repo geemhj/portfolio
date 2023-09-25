@@ -18,6 +18,7 @@
 /* 공통사항 */
 
 *{box-sizing: border-box; margin:0; padding:0; }
+html{scroll-behavior: smooth;}
 body{margin:0; padding:0; 
     font-family: 'Noto Sans KR', 'Playfair Display'; }
 ul, ol{list-style: none; }
@@ -42,7 +43,7 @@ button{background:transparent; outline:0; border:0; cursor: pointer;}
 .header__menu{display:flex; justify-content: space-between; gap:3rem; }
 .header__menu__item{ font-weight:500; padding-bottom:25px;}
 .header__menu__item:hover{border-bottom:3px solid var(--color-blue); }
-.header__menu__item.selected{border-bottom:3px solid var(--color-blue); color:var(--color-blue); font-weight: bold;}
+.header__menu__item.active{border-bottom:3px solid var(--color-blue); color:var(--color-blue); font-weight: bold;}
 .header__openbtn, .header__closebtn{display:none;}
 
 /* Body - 1. Home */
@@ -181,7 +182,7 @@ button{background:transparent; outline:0; border:0; cursor: pointer;}
     /* 모바일 내비게이션 > 햄버거메뉴 */
     #header{flex-direction: column; align-items: start;}
     .header__menu{flex-direction: column; text-align: center;  display:none;}
-    .header__menu__item{display:block;}
+    .header__menu__item{display:block; }
     .header__menu__item{padding-bottom:10px; margin-bottom:15px; border:3px solid transparent;}
     .header__nav{width:100%; }
     .header__openbtn{display:block; color:var(--color-white); font-size:2.5rem;
