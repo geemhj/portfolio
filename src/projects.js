@@ -7,7 +7,7 @@ function vSlide(){
     var ln = $(".projects li:last").index(); 
     
     if( count <= ln ){
-        $(".projects").stop().animate({marginLeft: -100 * count + "%"},"fast"); 
+        $(".projects").stop().animate({marginLeft: -100 * count + "%"},"slow"); 
         vSlideBtn(count);
     };
 };
@@ -19,7 +19,7 @@ function vSlideRe(){
     var ln = $(".projects li:last").index();          
 
     if( count >= 0 ){
-        $(".projects").stop().animate({marginLeft: -100 * count + "%"},"fast"); 
+        $(".projects").stop().animate({marginLeft: -100 * count + "%"},"slow"); 
         vSlideBtn(count);
     };
 };

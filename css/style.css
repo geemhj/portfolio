@@ -110,7 +110,8 @@ button{background:transparent; outline:0; border:0; cursor: pointer;}
 .project__data{text-align: left;}
 .project__title{font-size:2rem;}
 .project__description{font-size:1.2rem; padding:1.5rem 0;}
-.project__period, .project__contribution{line-height:180%;}
+.project__period, .project__contribution{line-height:180%; display:flex; }
+.project__period--strong,.project__contribution--strong{color:var(--color-accent); font-weight:bold; width:80px; }
 .project__link{margin-top:100px;}
 .project__link a{padding:1rem 2rem; border:1px solid var(--color-accent); border-radius: 3px; 
     color:var(--color-accent); font-weight:bold;

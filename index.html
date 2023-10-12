@@ -14,8 +14,8 @@
         <!-- OG (Open Graph Data) -->
         <meta property="og:title" content="김효정의 포트폴리오">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="배포 후 생성된 URL">
-        <meta property="og:image" content="배포 후 생성된 이미지 URL">
+        <meta property="og:url" content="http://hjk.dothome.co.kr">
+        <meta property="og:image" content="images/og.png">
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +24,9 @@
         
         <!-- Font Awesome -->
         <script src="https://kit.fontawesome.com/8752d6a7af.js" crossorigin="anonymous"></script>
+        
+        <!-- Typeit -->
+        <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
 
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css">
@@ -33,7 +36,7 @@
         <script type="module" src="src/main.js" defer></script>
         <script type="module" src="src/projects.js" defer></script>
         <script type="module" src="src/active_menu.js" defer></script>
-
+        <script type="module" src="src/type.js" defer></script>
 
     </head>
 
@@ -69,7 +72,7 @@
             <section id="home">
                 <div class="home__container">
                     <h2 class="home__title">Portfolio</h2>
-                    <p class="home__description">Web Publisher - KIM HYOJEONG</p>
+                    <p class="home__description typed">Web Publisher - KIM HYOJEONG</p>
                     <a class="home__btn" href="#contact">Contact Me!</a>
                 </div>
             </section>
@@ -203,8 +206,17 @@
                                 <div class="project__data">
                                     <h3 class="project__title">VIPS 빕스</h3>
                                     <p class="project__description">반응형 웹 가상 리뉴얼</p>
-                                    <p class="project__period">작업기간 : 2023.04 - 2023.05</p>
-                                    <p class="project__contribution">기여도 : 기획, 디자인, 구현 100%</p>
+                                    <ul>
+                                        <li class="project__period">
+                                            <p class="project__period--strong">작업기간</p>
+                                            <p>2023.04 ~ 2023.05</p>
+                                        </li>
+                                        <li class="project__contribution">
+                                            <p class="project__contribution--strong">기여도</p>
+                                            <p>기획, 디자인, 구현 100%</p>
+                                        </li>
+                                    </ul>
+
                                     <div class="project__link">
                                         <a href="https://www.figma.com/file/GrVjKZesbcZCebnVxOtu5R/VIPS---Responsive-Web-Design-%5Bprototype%5D?type=design&node-id=408%3A2387&mode=design&t=lNW2YXbFLMwy6pNc-1" target="_blank">프로젝트 설명서</a>
                                         <a href="http://hjk.dothome.co.kr/vips" target="_blank">웹 사이트</a>
@@ -219,8 +231,17 @@
                                 <div class="project__data">
                                     <h3 class="project__title">효성그룹</h3>
                                     <p class="project__description">모바일 웹 가상 리뉴얼</p>
-                                    <p class="project__period">작업기간 : 2023.06</p>
-                                    <p class="project__contribution">기여도 : 기획, 디자인, 구현 100%</p>
+                                    <ul>
+                                        <li class="project__period">
+                                            <p class="project__period--strong">작업기간</p>
+                                            <p>2023.06</p>
+                                        </li>
+                                        <li class="project__contribution">
+                                            <p class="project__contribution--strong">기여도</p>
+                                            <p>기획, 디자인, 구현 100%</p>
+                                        </li>
+                                    </ul>
+                                    
                                     <div class="project__link">
                                         <a href="https://www.figma.com/file/q89VuNAjQwJFZdKqkxXRA8/HYOSUNG---Mobile-%5Bprototype%5D?type=design&node-id=808%3A3989&mode=design&t=6Qamtt6ylAj588rO-1" target="_blank">프로젝트 설명서</a>
                                         <a href="http://hjk.dothome.co.kr/hyosung" target="_blank">웹 사이트</a>
