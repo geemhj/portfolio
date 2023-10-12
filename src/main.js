@@ -54,7 +54,6 @@ document.addEventListener('scroll', () => {
 });
 
 // Arrow up 버튼 아래로  스크롤시 투명하게 처리
-
 const arrowUp = document.querySelector('.arrow-up');
 document.addEventListener('scroll',() => {
   if(window.scrollY > homeHeight / 2 ){
@@ -62,6 +61,27 @@ document.addEventListener('scroll',() => {
   }else{
     arrowUp.style.opacity = 0;
   }
+});
+
+// section 스크롤시 등장 모션
+$(function(){
+  var sections = $(".section__motion");
+  
+  $(window).scroll(function() {
+    sections.each(function() {
+      var section = $(this);
+      var scrollPosition = $(window).scrollTop();
+      var sectionPosition = section.offset().top;
+      
+      // 스크롤이 섹션의 상단을 지나갔을 때 애니메이션 실행
+      if (scrollPosition > sectionPosition - (window.innerHeight / 2)) {
+        section.css({
+          opacity: 1,
+          transform: "translateY(0)"
+        });
+      }
+    });
+  });
 });
 
 
