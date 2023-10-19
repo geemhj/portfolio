@@ -37,9 +37,6 @@ $(function(){
       $(".header__openbtn").show();
     };
   });
-
-  // section 등장모션
-  
 });
 
 
@@ -63,28 +60,36 @@ document.addEventListener('scroll',() => {
   }
 });
 
-// section 스크롤시 등장 모션
-$(function(){
-  var sections = $(".section__motion");
-  
-  $(window).scroll(function() {
-    sections.each(function() {
-      var section = $(this);
-      var scrollPosition = $(window).scrollTop();
-      var sectionPosition = section.offset().top;
-      
-      // 스크롤이 섹션의 상단을 지나갔을 때 애니메이션 실행
-      if (scrollPosition > sectionPosition - (window.innerHeight / 2)) {
-        section.css({
-          opacity: 1,
-          transform: "translateY(0)"
-        });
-      }
-    });
-  });
+
+/*
+// 스크롤시 section 애니메이션
+let observer = new IntersectionObserver((e)=>{
+  e.forEach((box)=>{
+    if (box.isIntersecting){
+      box.target.style.opacity = 1;
+    }else{
+      box.target.style.opacity = 0;
+    }
+  })
+})
+
+let ability = document.querySelectorAll('.ability')
+observer.observe(ability[0])
+observer.observe(ability[1])
+observer.observe(ability[2])
+*/
+
+// 스크롤시 등장 모션
+ScrollOut({
+  onShown: (element) => {
+    new TypeIt(element.querySelector('.section__title'),{
+      startDelay: 500,
+      cursor: false,
+    })
+      .pause(2000)
+      .go();
+  },
 });
-
-
 
 
 

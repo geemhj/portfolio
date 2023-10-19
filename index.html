@@ -28,6 +28,9 @@
         <!-- Typeit -->
         <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
 
+        <!-- Scroll out -->
+        <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css">
 
@@ -78,7 +81,7 @@
             </section>
 
             <!-- 2. About me -->
-            <section id="about" class="section max-container section__motion">
+            <section id="about" class="section max-container" data-scroll>
                 <h2 class="section__title">ABOUT ME</h2>
                 <p class="section__description">
                     Do what you like, love what you do! 퍼블리싱을 좋아하는 <span>웹 퍼블리셔, 김효정</span>입니다.<br>
@@ -87,7 +90,7 @@
                     탄탄하고 감각적인 UI와 기억에 남는 UX를 제공하는, 좋아하는 것을 잘하는 웹 퍼블리셔가 되겠습니다.  
                 </p>
                 <ul class="abilities">
-                    <li class="ability">
+                    <li class="ability" >
                         <i class="fa-solid fa-graduation-cap ability__icon"></i>
                         <p class="ability__title">EDUCATION</p>
                         <ol class="ability__description">
@@ -133,7 +136,7 @@
 
             <!-- 3. Skills -->
             <section id="skills" class="section">
-                <div class="max-container section__motion">
+                <div class="max-container" data-scroll>
                     <h2 class="section__title">SKILLS</h2>
                     <p class="section__description">
                         디자인과 퍼블리싱에 대한 이해를 바탕으로 최적화된 시맨틱 태그를 활용해 명확하고 효율적인 마크업 작업을 수행합니다.<br>
@@ -193,10 +196,10 @@
             <!-- 4. Work -->
 
             <section id="work" class="section">
-                <div class="max-container">
-                    <h2 class="section__title section__motion">WORK</h2>
+                <div class="max-container" data-scroll>
+                    <h2 class="section__title">WORK</h2>
 
-                    <div class="projects__container projects__scroll section__motion">
+                    <div class="projects__container projects__scroll">
                         <ul class="projects">
                             <li class="project project1">
                                 <div class="project__img project__img1">
@@ -214,6 +217,10 @@
                                         <li class="project__contribution">
                                             <p class="project__contribution--strong">기여도</p>
                                             <p>기획, 디자인, 구현 100%</p>
+                                        </li>
+                                        <li class="project__tool">
+                                            <p class="project__tool--strong">툴</p>
+                                            <p>Figma, HTML, CSS, jQuery</p>
                                         </li>
                                     </ul>
 
@@ -239,6 +246,10 @@
                                         <li class="project__contribution">
                                             <p class="project__contribution--strong">기여도</p>
                                             <p>기획, 디자인, 구현 100%</p>
+                                        </li>
+                                        <li class="project__tool">
+                                            <p class="project__tool--strong">툴</p>
+                                            <p>Figma, HTML, CSS, jQuery</p>
                                         </li>
                                     </ul>
                                     
@@ -266,7 +277,7 @@
             </section>
 
             <!-- 5. Contact -->
-            <section id="contact" class="section section__motion">
+            <section id="contact" class="section" data-scroll>
                 <h2 class="section__title">CONTACT</h2>
                 <p class="contact__description">
                     "퍼블리싱은 단순히 정보를 전달하는 것 이상의 의미를 담아내는 일이라 생각합니다.<br>

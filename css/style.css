@@ -35,7 +35,16 @@ button{background:transparent; outline:0; border:0; cursor: pointer;}
     position:relative; left:50%; transform:translateX(-50%); margin:2rem 0;
     width:50px; height:1px; background:var(--color-text);}
 .section__description{line-height: 180%; margin-bottom: 5rem;}
-.section__motion{opacity: 0;transform: translateY(20px);transition: opacity 1s, transform 1s;}
+[data-scroll] {
+    opacity:0; 
+    transition: all 1.5s;
+  }
+  [data-scroll="in"] {
+    opacity: 1;
+  }
+  [data-scroll="out"] {
+    opacity: 0;
+  }
 
 /* Header */
 #header{background: var(--color-primary);  position:fixed; top:0; width:100%; padding:1rem 3rem ;
@@ -61,6 +70,9 @@ button{background:transparent; outline:0; border:0; cursor: pointer;}
 .abilities{display:flex; justify-content: space-between; gap:2rem;}
 .ability{flex:1; background:var(--color-primary); color:var(--color-text); border-radius:10px; 
     padding:3rem 0; }
+
+   
+
 .ability__icon{font-size:3.5rem; color:var(--color-accent);}
 .ability__title{font-weight: bold; padding:1rem 0 2rem 0; font-size:1.2rem;}
 .ability__date{display:flex; gap:1.5rem; justify-content: center;}
@@ -111,9 +123,9 @@ button{background:transparent; outline:0; border:0; cursor: pointer;}
 .project__data{text-align: left;}
 .project__title{font-size:2rem;}
 .project__description{font-size:1.2rem; padding:1.5rem 0;}
-.project__period, .project__contribution{line-height:180%; display:flex; }
-.project__period--strong,.project__contribution--strong{color:var(--color-accent); font-weight:bold; width:80px; }
-.project__link{margin-top:100px;}
+.project__period, .project__contribution, .project__tool{line-height:200%; display:flex; }
+.project__period--strong,.project__contribution--strong, .project__tool--strong{color:var(--color-accent); font-weight:bold; width:80px; }
+.project__link{margin-top:80px;}
 .project__link a{padding:1rem 2rem; border:1px solid var(--color-accent); border-radius: 3px; 
     color:var(--color-accent); font-weight:bold;
     margin-right:5px;}
